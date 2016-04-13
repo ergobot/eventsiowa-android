@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+/app/src/release/
+/app/src/release/google_maps_api.xml
+/app/src/main/res/raw
+/app/src/main/res/values/strings.xml
+app/build
+app/google-services.json

@@ -1,0 +1,167 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--<ImageView-->
+            <!--android:id="@+id/parallax_bg"-->
+            <!--android:layout_width="1000dp"-->
+            <!--android:layout_height="1000dp"-->
+            <!--android:background="@drawable/DesMoinesskyline" />-->
+
+
+        <!--<com.placesware.placesiowa.ParallaxScrollView-->
+            <!--android:id="@+id/background_sv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" >-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/parallax_bg"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#00ffffff" />-->
+        <!--</com.placesware.placesiowa.ParallaxScrollView>-->
+
+        <!--<com.placesware.placesiowa.ParallaxScrollView-->
+            <!--android:id="@+id/content_sv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" >-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical" >-->
+            <!--</LinearLayout>-->
+        <!--</com.placesware.placesiowa.ParallaxScrollView>-->
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/materialbackground"
+    >
+
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/title_text"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--android:text="@string/title_text"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="36sp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_above="@+id/google_icon"-->
+            <!--android:typeface="serif" />-->
+
+        <ImageView
+            android:id="@+id/google_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_google_icon"
+            android:src="@drawable/eventsiowasign2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp" />
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/profile_image"-->
+            <!--android:layout_width="282dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_lotus"-->
+            <!--android:layout_weight="3"-->
+            <!--app:civ_border_width="2dp"-->
+            <!--app:civ_border_color="#FF000000"-->
+            <!--app:civ_fill_color="@color/colorPrimaryLight" />-->
+
+
+        <com.hanks.htextview.HTextView
+            xmlns:htext="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            htext:animateType="anvil"
+
+            android:typeface="serif"
+            android:layout_centerInParent="true" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="60dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight">
+
+        <!--<com.google.android.gms.common.SignInButton-->
+            <!--android:id="@+id/sign_in_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:visibility="visible"-->
+
+            <!--tools:visibility="visible" />-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/sign_out_and_disconnect"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingRight="16dp"-->
+            <!--android:visibility="gone"-->
+            <!--tools:visibility="visible">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/sign_out_button"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/sign_out"-->
+                <!--android:theme="@style/ThemeOverlay.MyDarkButton" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/disconnect_button"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/disconnect"-->
+                <!--android:theme="@style/ThemeOverlay.MyDarkButton" />-->
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

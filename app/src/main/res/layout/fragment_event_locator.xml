@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.placesware.placesiowa.EventLocatorFragment">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_gravity="top"-->
+
+        <!-->-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/currentlocationfab"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/fab_margin"-->
+            <!--android:src="@android:drawable/ic_dialog_email"-->
+
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/directionsfab"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/fab_margin"-->
+            <!--android:src="@android:drawable/ic_media_play"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_above="@+id/currentlocationfab"/>-->
+
+
+
+    <!--</RelativeLayout>-->
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/addProductFab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@android:drawable/ic_media_play"/>-->
+
+    <!--<View-->
+        <!--android:id="@+id/dummy"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="16dp"-->
+        <!--app:layout_anchor="@id/addProductFab"-->
+        <!--app:layout_anchorGravity="top|right|end" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/searchFab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end|top"-->
+        <!--android:layout_margin="16dp"-->
+        <!--app:layout_anchor="@id/addProductFab"-->
+        <!--app:layout_anchorGravity="bottom|right|end"-->
+        <!--android:src="@android:drawable/ic_dialog_email"/>-->
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="68dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParallaxOffset="@dimen/parallaxOffset"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoScrollableView="@+id/list">
+
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="10"-->
+                <!-->-->
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    map:cameraBearing="0"
+                    map:cameraTargetLat="41.591158"
+                    map:cameraTargetLng="-93.6057713"
+                    map:cameraZoom="13"
+                    tools:context="com.placesware.placesiowa.MapsActivity"
+                    tools:ignore="MissingPrefix">
+
+                </fragment>
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/imagefill"-->
+                    <!--android:background="@color/colorPrimaryLight"-->
+                    <!--android:layout_weight="6"/>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:map="http://schemas.android.com/apk/res-auto"-->
+                <!--xmlns:tools="http://schemas.android.com/tools"-->
+                <!--android:id="@+id/map"-->
+                <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--tools:context="com.demo.mapsdemo.MapsActivity">-->
+
+                <!--</fragment>-->
+            <!--<TextView-->
+            <!--android:id="@+id/main"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="?attr/actionBarSize"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Main Content"-->
+            <!--android:clickable="true"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:textSize="16sp" />-->
+        </LinearLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/dragView">
+
+
+            <!--<include layout="@layout/content_navigation" />-->
+            <FrameLayout android:id="@+id/slidecontainer" android:layout_width="match_parent" android:layout_height="match_parent" />
+
+
+
+
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/directionsmiddlefab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_directions_car_black_24dp"
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@+id/action_button_filter"
+        app:layout_anchorGravity="top"
+        app:backgroundTint="@color/colorPrimaryLight"
+        android:tint="@color/colorAccent"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/middledirectionheight"
+        />
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/directionsmiddlefab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_directions_car_black_24dp"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--app:layout_anchor="@+id/action_button_filter"-->
+        <!--app:layout_anchorGravity="top"-->
+        <!--app:backgroundTint="@color/colorPrimaryLight"-->
+        <!--android:tint="@color/colorAccent"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginBottom="400dp"-->
+        <!--/>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filterfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter_list_black_24dp"
+        android:tint="@color/colorPrimaryLight"
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@+id/action_button_filter"
+        app:layout_anchorGravity="top"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/directionsfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_directions_black_24dp"
+        android:tint="@color/colorPrimaryLight"
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@+id/action_button_filter"
+        app:layout_anchorGravity="top"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/currentlocationfab"
+        app:backgroundTint="@color/colorPrimaryLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_gps_fixed_black_24dp"
+        app:layout_anchor="@id/dragView"
+        app:layout_anchorGravity="top|right"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        />
+
+</FrameLayout>

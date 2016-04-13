@@ -1,0 +1,211 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_action_bar_splitter"
+    tools:context="com.placesware.placesiowa.OpenResultsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/enablefiltercard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/colorPrimaryLight"
+            >
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/filterswitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="15dp"
+                android:checked="true"
+                android:text="Places Filter"
+                android:textOff=""
+                android:textOn=""
+                app:showText="true"/>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/datefiltercard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_below="@+id/enablefiltercard"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/colorPrimaryLight"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardheaderdate"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="fill_vertical"
+                android:text="Date"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimaryText"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/cardheaderdate"
+                    android:background="?android:attr/dividerHorizontal"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/startdatelayout"
+                android:layout_below="@+id/cardheaderdate">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Start Date"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/startdatelabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="None"
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/startdateinput" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/enddatelayout"
+                android:background="?android:attr/dividerHorizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/enddatelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/startdatelayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="End Date"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/enddatelabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="None"
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/enddateinput" />
+
+            </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/colorPrimaryLight"
+            android:text="Reset Filter"
+            android:id="@+id/resetfilter"/>
+
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/starttimelayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="20dp"-->
+            <!--android:layout_below="@+id/enddatelayout">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="Start Time"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:id="@+id/starttimelabel" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="None"-->
+
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:id="@+id/starttimeinput" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/endtimelayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="20dp"-->
+            <!--android:layout_below="@+id/starttimelayout">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="None"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:id="@+id/endtimelabel" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="None"-->
+
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:id="@+id/endtimeinput" />-->
+
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+</FrameLayout>
